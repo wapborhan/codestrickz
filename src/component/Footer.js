@@ -8,9 +8,9 @@ export default class Footer extends PureComponent {
           <li>
             <a
               className="github-button"
-              href="https://github.com/zonayedpca/js.zonayed.me"
+              href="https://github.com/wapborhan/codestrickz"
               data-icon="octicon-star"
-              aria-label="Star zonayedpca/js.zonayed.me on GitHub"
+              aria-label="Star wapborhan/codestrickz on GitHub"
             >
               Star
             </a>
@@ -18,7 +18,7 @@ export default class Footer extends PureComponent {
           <li>
             <a
               className="github-button"
-              href="https://github.com/zonayedpca/js.zonayed.me/issues"
+              href="https://github.com/wapborhan/codestrickz/issues"
               data-icon="octicon-issue-opened"
               aria-label="Issue ntkme/github-buttons on GitHub"
             >
@@ -28,8 +28,8 @@ export default class Footer extends PureComponent {
           <li>
             <a
               className="github-button"
-              href="https://github.com/zonayedpca"
-              aria-label="Follow @zonayedpca on GitHub"
+              href="https://github.com/wapborhan"
+              aria-label="Follow @wapborhan on GitHub"
             >
               Follow Me
             </a>
