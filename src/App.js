@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import axios from "axios";
 
@@ -8,9 +8,6 @@ import Footer from "./component/Footer";
 import SingleContent from "./component/SingleContent";
 
 import "./App.css";
-
-const bloggerUrl =
-  "https://www.googleapis.com/blogger/v3/blogs/1491397990658765883/posts?callback=handleResponse&key=AIzaSyAzu62vFjimdTkVH4bsO0X8SCXq2lKkHkQ";
 
 export default class App extends Component {
   state = {
@@ -24,33 +21,27 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    // const bloggerWithFetch = async () => {
-    //   const response = await fetch(bloggerUrl);
-    //   const jsonData = await response.json();
-    //   this.setState({ basics: jsonData });
-    // };
-    axios(bloggerUrl).then((data) => {
-      console.log(data);
-    });
-    // axios(bloggerUrl).then(({ data }) => this.setState({ basics: data }));
-    // axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
-    //   this.setState({ advance: data })
-    // );
-    // axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
-    //   this.setState({ es6: data })
-    // );
-    // axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
-    //   this.setState({ dom: data })
-    // );
-    // axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
-    //   this.setState({ daily: data })
-    // );
-    // axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
-    //   this.setState({ algods: data })
-    // );
-    // axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
-    //   this.setState({ soft: data })
-    // );
+    axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
+      this.setState({ basics: data })
+    );
+    axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
+      this.setState({ advance: data })
+    );
+    axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
+      this.setState({ es6: data })
+    );
+    axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
+      this.setState({ dom: data })
+    );
+    axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
+      this.setState({ daily: data })
+    );
+    axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
+      this.setState({ algods: data })
+    );
+    axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
+      this.setState({ soft: data })
+    );
   }
 
   componentWillUnmount() {
