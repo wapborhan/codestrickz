@@ -61,7 +61,7 @@ export default class SingleContent extends Component {
     } = this;
     const {
       state: {
-        data: { title, content, link },
+        data: { title, content },
       },
     } = this;
     this.setLastRead(id, labels, title);

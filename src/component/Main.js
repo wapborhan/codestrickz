@@ -28,8 +28,11 @@ export default class Main extends Component {
 
   render() {
     const {
-      data: { basics, advance, es6, dom, daily, algods, soft },
+      data: { basics },
     } = this.props;
+    // const {
+    //   data: { basics, advance, es6, dom, daily, algods, soft },
+    // } = this.props;
     const { delayed, lastRead, showLastRead } = this.state;
     const delayMsg = (
       <span>
