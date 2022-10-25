@@ -70,7 +70,7 @@ export default class Main extends Component {
               {delayed ? delayMsg : ""}
             </div>
           )}
-          {advance.length > 0 ? (
+          {/* {advance.length > 0 ? (
             <Content
               title="অ্যাডভান্স"
               data={advance}
@@ -82,16 +82,16 @@ export default class Main extends Component {
               <BarLoader color={"#F44336"} />
               {delayed ? delayMsg : ""}
             </div>
-          )}
-          {es6.length > 0 ? (
+          )} */}
+          {/* {es6.length > 0 ? (
             <Content title="ইএস৬" data={es6} color="#BDBDBD" topic="es6" />
           ) : (
             <div className="loading-bar">
               <BarLoader color={"#BDBDBD"} />
               {delayed ? delayMsg : ""}
             </div>
-          )}
-          {dom.length > 0 ? (
+          )} */}
+          {/* {dom.length > 0 ? (
             <Content
               title="ডম ম্যানিপুলেশন"
               data={dom}
@@ -103,8 +103,8 @@ export default class Main extends Component {
               <BarLoader color={"#FFC107"} />
               {delayed ? delayMsg : ""}
             </div>
-          )}
-          {daily.length > 0 ? (
+          )} */}
+          {/* {daily.length > 0 ? (
             <Content
               title="নিত্যদিনের ব্যবহার"
               data={daily}
@@ -116,8 +116,8 @@ export default class Main extends Component {
               <BarLoader color={"#4CAF50"} />
               {delayed ? delayMsg : ""}
             </div>
-          )}
-          {algods.length > 0 ? (
+          )} */}
+          {/* {algods.length > 0 ? (
             <Content
               title="অ্যালগরিদম ও ডাটা স্ট্রাকচার"
               data={algods}
@@ -129,15 +129,15 @@ export default class Main extends Component {
               <BarLoader color={"#315950"} />
               {delayed ? delayMsg : ""}
             </div>
-          )}
-          {soft.length > 0 ? (
+          )} */}
+          {/* {soft.length > 0 ? (
             <Content title="সফট স্কিল" data={soft} color="#000" topic="soft" />
           ) : (
             <div className="loading-bar">
               <BarLoader color={"#000"} />
               {delayed ? delayMsg : ""}
             </div>
-          )}
+          )} */}
         </section>
       </React.Fragment>
     );

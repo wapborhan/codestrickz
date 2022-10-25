@@ -20,9 +20,9 @@ export default class SingleContent extends Component {
         },
       },
     } = this;
-    axios(`https://jsonplaceholder.typicode.com/posts/${id}`).then(({ data }) =>
-      this.setState({ data, shouldUpdate: false })
-    );
+    axios(
+      `https://www.googleapis.com/blogger/v3/blogs/1491397990658765883/posts/${id}?key=AIzaSyAzu62vFjimdTkVH4bsO0X8SCXq2lKkHkQ&clientid=200223325331-dber15e4juaus1uajuote4p0o0vfqv6a.apps.googleusercontent.com&clientsecret=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`
+    ).then(({ data }) => this.setState({ data, shouldUpdate: false }));
     toTop();
   }
 
@@ -33,10 +33,11 @@ export default class SingleContent extends Component {
     return shouldUpdate;
   }
 
-  setLastRead = (id, topic, title) => {
+  setLastRead = (id, labels, title) => {
     window.localStorage.setItem(
       "lastRead",
-      `${id}-${topic}-${title.replace("-", " ")}`
+      // `${id}-${labels}-${title.replace("-", " ")}`
+      `${id}-${labels}-${title}`
     );
   };
 
@@ -54,16 +55,18 @@ export default class SingleContent extends Component {
     const {
       props: {
         match: {
-          params: { topic, id },
+          params: { labels, id },
         },
       },
     } = this;
     const {
       state: {
-        data: { title, body, link },
+        data: { title, content, link },
       },
     } = this;
-    this.setLastRead(id, topic, title);
+    this.setLastRead(id, labels, title);
+
+    console.log(this.state.data);
     return (
       <React.Fragment>
         <Helmet>
@@ -76,7 +79,7 @@ export default class SingleContent extends Component {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            href={`https://github.com/zonayedpca/js.zonayed.me/issues/new?title=${title}&labels=%E0%A6%B2%E0%A7%87%E0%A6%96%E0%A6%BE%E0%A7%9F%20%E0%A6%AD%E0%A7%81%E0%A6%B2&body=সমস্যা বিস্তারিতঃ `}
+            href={`https://github.com/wapborhan/codestrickz/issues/new?title=${title}&labels=%E0%A6%B2%E0%A7%87%E0%A6%96%E0%A6%BE%E0%A7%9F%20%E0%A6%AD%E0%A7%81%E0%A6%B2&body=সমস্যা বিস্তারিতঃ `}
             className="btn btn-error"
           >
             ভুল পেয়েছেন?
@@ -84,9 +87,11 @@ export default class SingleContent extends Component {
         </div>
         <div className="single-content">
           <h1 className="title" dangerouslySetInnerHTML={createMarkup(title)} />
+          <br />
+          {labels}
           <div className="post">
-            <span dangerouslySetInnerHTML={createMarkup(body)} />
-            <p>
+            <span dangerouslySetInnerHTML={createMarkup(content)} />
+            {/* <p>
               আমার এই লেখা পূর্বে{" "}
               <a rel="noopener noreferrer" target="_blank" href={`${link}`}>
                 আমার ব্লগে
@@ -109,7 +114,7 @@ export default class SingleContent extends Component {
               </a>{" "}
               করলে আমি নিজে থেকেই আমার নতুন লেখাগুলো আপনার ইমেইলে প্রতি শুক্রবার
               সকালে পাঠিয়ে দিবো। ভালো থাকবেন। হ্যাপী প্রোগ্রামিং!
-            </p>
+            </p> */}
           </div>
         </div>
       </React.Fragment>
