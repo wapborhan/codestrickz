@@ -33,11 +33,11 @@ export default class SingleContent extends Component {
     return shouldUpdate;
   }
 
-  setLastRead = (id, labels, title) => {
+  setLastRead = (id, topic, title) => {
     window.localStorage.setItem(
       "lastRead",
       // `${id}-${labels}-${title.replace("-", " ")}`
-      `${id}-${labels}-${title}`
+      `${id}-${topic}-${title}`
     );
   };
 

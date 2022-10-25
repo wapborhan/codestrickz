@@ -116,15 +116,17 @@ body {
 }
 
 .card {
-  order: 2;
-  width: calc(100% / 2 - 20px);
-  position: relative;
-  background: #fff;
-  padding: 20px 25px;
-  margin: 10px;
-  border-left: solid 10px;
-  -webkit-box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25);
-  box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25);
+  
+order: 2;
+    width: calc(100% / 2 - 20px);
+    position: relative;
+    background: #fff;
+    padding: 20px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    border-left: solid 10px;
+    -webkit-box-shadow: 0 0px 10px hsl(224deg 8% 10% / 25%);
+    box-shadow: 0 0px 10px hsl(224deg 8% 10% / 25%);
 }
 
 .card a {
