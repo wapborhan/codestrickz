@@ -41,9 +41,7 @@ export default class Main extends Component {
     return (
       <React.Fragment>
         <Helmet>
-          <title>
-            হাতেকলমে জাভাস্ক্রিপ্ট - সম্পূর্ণ বাংলায় জাভাস্ক্রিপ্ট শিখুন
-          </title>
+          <title>Codes TrickZ - সম্পূর্ণ বাংলায় প্রোগ্রামিং শিখুন</title>
         </Helmet>
         <section className="content-area">
           {lastRead && showLastRead && (
