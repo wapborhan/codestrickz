@@ -45,6 +45,7 @@ export default class SingleContent extends Component {
     const {
       state: { data },
     } = this;
+
     if (!data)
       return (
         <div className="loading-bar">
@@ -59,14 +60,17 @@ export default class SingleContent extends Component {
         },
       },
     } = this;
+
     const {
       state: {
-        data: { title, content },
+        data: { title, content, author },
       },
     } = this;
-    this.setLastRead(id, labels, title);
 
-    console.log(this.state.data);
+    this.setLastRead(id, labels, title);
+    const img = this.state.data.author.image.url;
+    const tags = this.state.data.labels;
+    // console.log(this.state.data.labels);
     return (
       <React.Fragment>
         <Helmet>
@@ -87,9 +91,14 @@ export default class SingleContent extends Component {
         </div>
         <div className="single-content">
           <h1 className="title" dangerouslySetInnerHTML={createMarkup(title)} />
-          <br />
-          {labels}
+          <p>
+            {" "}
+            <span style={{ color: "#f44336" }}>{tags}</span> বিভাগে, পোস্টটি
+            করেছে - <img src={img} alt="" /> {author.displayName}
+          </p>
           <div className="post">
+            <br />
+
             <span dangerouslySetInnerHTML={createMarkup(content)} />
             {/* <p>
               আমার এই লেখা পূর্বে{" "}

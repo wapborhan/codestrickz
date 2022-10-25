@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -56,7 +57,7 @@ body {
 .loading-bar span {
   display: inline-block;
   font-size: 11px;
-  color: #F44336;
+  color: #f44336;
   margin-top: 15px;
 }
 
@@ -70,7 +71,7 @@ body {
   text-align: center;
   border-radius: 4px;
   color: rgba(0, 0, 0, 0.7);
-  border-top: solid 5px #00BCD4;
+  border-top: solid 5px #00bcd4;
 }
 
 .last-read div span {
@@ -104,26 +105,26 @@ body {
 }
 
 .content h4:before {
-    content: "";
-    position: relative;
-    display: inline-block;
-    top: -5px;
-    margin-right: 15px;
-    height: 3px;
-    width: 10px;
-    background-color: #606770;
+  content: "";
+  position: relative;
+  display: inline-block;
+  top: -5px;
+  margin-right: 15px;
+  height: 3px;
+  width: 10px;
+  background-color: #606770;
 }
 
 .card {
   order: 2;
-  width: calc(100%/2 - 20px);
+  width: calc(100% / 2 - 20px);
   position: relative;
   background: #fff;
   padding: 20px 25px;
   margin: 10px;
   border-left: solid 10px;
-  -webkit-box-shadow: 0 5px 30px hsla(224,8%,64%,.25);
-  box-shadow: 0 5px 30px hsla(224,8%,64%,.25);
+  -webkit-box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25);
+  box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25);
 }
 
 .card a {
@@ -153,15 +154,15 @@ body {
 
 .btn-error {
   margin-left: 15px;
-  background-color: #F44336;
+  background-color: #f44336;
 }
 
 .single-content {
   background-color: #fff;
   padding: 45px 35px;
   margin: 0 25px;
-  -webkit-box-shadow: 0 5px 30px hsla(224,8%,64%,.25);
-  box-shadow: 0 5px 30px hsla(224,8%,64%,.25);
+  -webkit-box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25);
+  box-shadow: 0 5px 30px hsla(224, 8%, 64%, 0.25);
 }
 
 .single-content .title {
@@ -171,7 +172,7 @@ body {
 
 .single-content .button {
   text-decoration: none;
-  background-color: rgba(0,0,0,.84);
+  background-color: rgba(0, 0, 0, 0.84);
   font-size: 21px;
   text-transform: uppercase;
   color: #fff;
@@ -182,7 +183,7 @@ body {
 .section-divider,
 .single-content p {
   font-size: 24px;
-  color: rgba(0,0,0,.84);
+  color: rgba(0, 0, 0, 0.84);
   line-height: 2;
   text-align: justify;
 }
@@ -218,7 +219,7 @@ body {
   padding: 30px 25px;
   margin: 45px;
   text-align: left;
-  font-family: 'consolas', monospace;
+  font-family: "consolas", monospace;
   overflow-x: scroll;
 }
 
@@ -236,7 +237,7 @@ body {
 }
 
 .single-content a {
-  color: rgba(0,0,0,.84);
+  color: rgba(0, 0, 0, 0.84);
 }
 
 .widget_wysija_cont {
@@ -254,7 +255,7 @@ footer ul {
 }
 
 footer ul.github {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 footer ul li {
@@ -268,7 +269,7 @@ footer ul li {
 }
 
 footer ul li .love {
-  color: #F44336;
+  color: #f44336;
 }
 footer ul li a {
   text-decoration: none;
@@ -317,7 +318,8 @@ footer ul li a {
     margin: 10px 0;
   }
 
-  .section-divider, .single-content p,
+  .section-divider,
+  .single-content p,
   .single-content ul {
     font-size: 20px;
   }
@@ -345,4 +347,8 @@ footer ul li a {
   .single-content pre {
     margin: 45px 0;
   }
+}
+.card h5.tags {
+color: #f44336;
+
 }
