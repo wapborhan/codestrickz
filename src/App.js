@@ -49,7 +49,7 @@ export default class App extends Component {
   }
 
   render() {
-    // console.log(this.state.basics);
+    console.log(this.state.basics);
     return (
       <BrowserRouter>
         <div className="App">
