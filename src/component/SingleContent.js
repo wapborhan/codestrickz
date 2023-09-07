@@ -20,9 +20,44 @@ export default class SingleContent extends Component {
         },
       },
     } = this;
+    // Fetch On Blogspot.com
     axios(
       `https://www.googleapis.com/blogger/v3/blogs/1491397990658765883/posts/${id}?key=AIzaSyAzu62vFjimdTkVH4bsO0X8SCXq2lKkHkQ&clientid=200223325331-dber15e4juaus1uajuote4p0o0vfqv6a.apps.googleusercontent.com&clientsecret=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`
     ).then(({ data }) => this.setState({ data, shouldUpdate: false }));
+
+    // Fetch on Hashnode
+    // const fetchPostsByUsername = async (slug) => {
+    //   const query = JSON.stringify({
+    //     query: `{
+    //       post(slug: "${slug}", hostname: "") {
+    //         title
+    //         brief
+    //         coverImage
+    //         author {
+    //           name
+    //           photo
+    //         }
+    //       }
+    //     }`,
+    //   });
+
+    //   const response = await fetch("https://api.hashnode.com/", {
+    //     method: "post",
+    //     body: query,
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   });
+
+    //   const jsonResponse = await response.json();
+    //   const data = jsonResponse.data.post;
+    //   this.setState({ data, shouldUpdate: false });
+    //   console.log(jsonResponse.data.post);
+    //   // console.log(jsonResponse.data.user.publication.posts);
+    // };
+
+    // fetchPostsByUsername(slug);
+
     toTop();
   }
 
@@ -70,7 +105,6 @@ export default class SingleContent extends Component {
     this.setLastRead(id, labels, title);
     const img = this.state.data.author.image.url;
     const tags = this.state.data.labels;
-    // console.log(this.state.data.labels);
     return (
       <React.Fragment>
         <Helmet>
@@ -93,37 +127,15 @@ export default class SingleContent extends Component {
           <h1 className="title" dangerouslySetInnerHTML={createMarkup(title)} />
           <p>
             {" "}
-            <span style={{ color: "#f44336" }}>{tags}</span> বিভাগে, পোস্টটি
-            করেছে - <img src={img} alt="" /> {author.displayName}
+            <span style={{ color: "#f44336" }}> {tags} </span> বিভাগে, পোস্টটি
+            করেছে - <img src={img} width="40px" alt="" />
+            {author.displayName}
           </p>
           <div className="post">
             <br />
 
+            <br />
             <span dangerouslySetInnerHTML={createMarkup(content)} />
-            {/* <p>
-              আমার এই লেখা পূর্বে{" "}
-              <a rel="noopener noreferrer" target="_blank" href={`${link}`}>
-                আমার ব্লগে
-              </a>{" "}
-              প্রকাশিত হয়েছে। চাইলে{" "}
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://with.zonayed.me/bn"
-              >
-                আমার ব্লগ
-              </a>{" "}
-              থেকে ঘুরে আসতে পারেন। ব্লগ থেকে{" "}
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://with.zonayed.me/bn/%E0%A6%B8%E0%A6%BE%E0%A6%AC%E0%A6%B8%E0%A7%8D%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%87%E0%A6%AC-%E0%A6%95%E0%A6%B0%E0%A7%81%E0%A6%A8/"
-              >
-                সাবস্ক্রাইব
-              </a>{" "}
-              করলে আমি নিজে থেকেই আমার নতুন লেখাগুলো আপনার ইমেইলে প্রতি শুক্রবার
-              সকালে পাঠিয়ে দিবো। ভালো থাকবেন। হ্যাপী প্রোগ্রামিং!
-            </p> */}
           </div>
         </div>
       </React.Fragment>

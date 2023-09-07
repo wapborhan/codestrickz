@@ -9,6 +9,7 @@ export default class Content extends PureComponent {
     const showData = data.map((singleData) => (
       <Card key={singleData.id} data={singleData} topic={topic} color={color} />
     ));
+
     return (
       <div className="content">
         <h4>{title}</h4>

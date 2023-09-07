@@ -42,6 +42,35 @@ export default class App extends Component {
     // axios("https://jsonplaceholder.typicode.com/posts").then(({ data }) =>
     //   this.setState({ soft: data })
     // );
+    // const fetchPostsByUsername = async (username) => {
+    //   const query = JSON.stringify({
+    //     query: `{
+    //             user(username: "${username}") {
+    //               publication {
+    //                 posts(page: 0) {
+    //                   _id
+    //                   cuid
+    //                   coverImage
+    //                   title
+    //                   slug
+    //                 }
+    //             }
+    //         }
+    //     }`,
+    //   });
+    //   const response = await fetch("https://api.hashnode.com/", {
+    //     method: "post",
+    //     body: query,
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   });
+    //   const jsonResponse = await response.json();
+    //   this.setState({ basics: jsonResponse.data.user.publication.posts });
+    //   // console.log(jsonResponse);
+    //   // console.log(jsonResponse.data.user.publication.posts);
+    // };
+    // fetchPostsByUsername("wapborhan");
   }
 
   componentWillUnmount() {
