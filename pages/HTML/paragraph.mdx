@@ -1,0 +1,36 @@
+---
+title: এইচটিএমএল অনুচ্ছেদ (HTML Paragraph)
+description: HTML Tag Tutorial in Bangla
+image: html.png
+---
+
+ওয়েব পেজে কোন লেখা প্রকাশ করতে চাইলে p ট্যাগ ব্যবহার করা হয়। `<p>` হচ্ছে এর start tag এবং `</p>` হচ্ছে এর end tag. এই start এবং end ট্যাগের ভিতর যেকোন লেখা দিতে পারেন। এই লেখা প্যারাগ্রাফ আকারে ব্রাউজারে দেখাবে। যেমন
+
+```html copy  {1,2,3} filename="index.html"
+<p>When encountering a new paragraph "</p>
+<p>
+  "tag, the browser typically inserts one blank line plus some extra vertical
+  space into the display before starting the new paragraph.
+</p>
+```
+
+এই ট্যাগে এট্রিবিউট ব্যবহার করা যায় যেমন নিচের এট্রিবিউটগুলি বেশি ব্যবহৃত
+
+align, class, id, style, title এছাড়া ইভেন্ট এট্রিবিউট onmouseover, onclick ইত্যাদি ব্যবহার করা যায়।
+
+class এবং id এট্রিবিউট ব্যবহার করে শুধু এই p এলিমেন্ট নয় বরং প্রায় সব এলিমেন্টে নাম দেয়া যায় পরে সেই নাম ধরে সিএসএস স্টাইল করা হয়। সিএসএস টিউটোরিয়ালে আরো বিস্তারিত দেখতে পাবেন। এখানে align, title এবং style এট্রিবিউটের কিছু প্রয়োগ দেখানো হল
+
+```html copy filename="index.html"
+<p align="right">Most browsers automatically left-justify a new paragraph.</p>
+2. 3.
+<p align="center">To change this behavior, the align attribute for the "</p>
+<p>
+  " tag and provide four kinds of content justification: left, right, center,
+  and justify.
+</p>
+4. 5.
+<p style="background-color:#f00;" title="This is tooltip tile">
+  You may specify a paragraph only within a block, along with other paragraphs,
+  lists, forms, and preformatted text
+</p>
+```
