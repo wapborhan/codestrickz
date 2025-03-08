@@ -1,8 +1,18 @@
 {
   "version": 2,
   "name": "codestrickz",
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-  "routes": [{ "src": "/(.*)", "dest": "/" }],
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
   "git": {
     "deploymentEnabled": true
   }
