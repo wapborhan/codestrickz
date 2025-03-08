@@ -24,7 +24,7 @@ const config: DocsThemeConfig = {
       (isDefault ? "og.jpeg" : `/og?title=${config.title}`);
 
     const url =
-      "http://localhost:3000" +
+      "https://codestrickz.wapborhan.com/" +
       (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
 
     return (

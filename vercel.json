@@ -1,18 +1,4 @@
 {
-  "version": 2,
-  "name": "codestrickz",
-  "builds": [
-    {
-      "src": "next.config.js",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    }
-  ],
   "git": {
     "deploymentEnabled": true
   }
