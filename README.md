@@ -1,4 +1,6 @@
-# CodesTrickZ Docs Template
+# CodesTrickZ
+
+![CodesTrickZ](/public/screencapture.jpg)
 
 [**Live Demo →**](https://codestrickz.wapborhan.com/)
 

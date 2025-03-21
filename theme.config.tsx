@@ -20,11 +20,10 @@ const config: DocsThemeConfig = {
     const { route } = useRouter();
     const isDefault = route === "/" || !config.title;
     const image =
-      "https://nextra.site/" +
-      (isDefault ? "og.jpeg" : `/og?title=${config.title}`);
+      "" + (isDefault ? "/screencapture.jpg" : `${frontMatter.image}`);
 
     const url =
-      "https://codestrickz.wapborhan.com/" +
+      "https://codestrickz.wapborhan.com" +
       (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
 
     return (

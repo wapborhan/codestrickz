@@ -20,17 +20,28 @@ align, class, id, style, title এছাড়া ইভেন্ট এট্র�
 
 class এবং id এট্রিবিউট ব্যবহার করে শুধু এই p এলিমেন্ট নয় বরং প্রায় সব এলিমেন্টে নাম দেয়া যায় পরে সেই নাম ধরে সিএসএস স্টাইল করা হয়। সিএসএস টিউটোরিয়ালে আরো বিস্তারিত দেখতে পাবেন। এখানে align, title এবং style এট্রিবিউটের কিছু প্রয়োগ দেখানো হল
 
-```html copy filename="index.html"
-<p align="right">Most browsers automatically left-justify a new paragraph.</p>
-2. 3.
-<p align="center">To change this behavior, the align attribute for the "</p>
-<p>
-  " tag and provide four kinds of content justification: left, right, center,
-  and justify.
-</p>
-4. 5.
-<p style="background-color:#f00;" title="This is tooltip tile">
-  You may specify a paragraph only within a block, along with other paragraphs,
-  lists, forms, and preformatted text
-</p>
+```html copy {7,8,,9,11,13,14,15,16,18,19,20,21} filename="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--- JS/CSS file is to be added here -->
+  </head>
+  <body>
+    <p align="right">
+      Most browsers automatically left-justify a new paragraph.
+    </p>
+
+    <p align="center">To change this behavior, the align attribute for the</p>
+
+    <p>
+      tag and provide four kinds of content justification: left, right, center,
+      and justify.
+    </p>
+
+    <p style="background-color:#f00;" title="This is tooltip tile">
+      You may specify a paragraph only within a block, along with other
+      paragraphs, lists, forms, and preformatted text
+    </p>
+  </body>
+</html>
 ```

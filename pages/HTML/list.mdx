@@ -1,0 +1,125 @@
+---
+title: এইচটিএমএল তালিকা  (HTML List)
+description: HTML Tutorial in Bangla
+image: html.png
+---
+
+ওয়েব পেজে যদি তালিকা বা লিস্ট প্রদর্শন করাতে চান তখন এইচটিএমএল এ ৩ ধরনের লিস্ট করার ট্যাগ আছে, প্রয়োজনমত যেকোন একটি ব্যবহার করতে পারেন।
+
+**Unordered List :**
+
+এটিই সবচেয়ে বেশি ব্যবহৃত হয় প্রফেশনালি। `<ul></ul>` এর ভিতরে রাখতে হবে এবং `<li></li>` এলিমেন্টের ভিতর একটা একটা করে আইটেম রাখতে হবে। প্রদর্শন করবে তালিকা আকারে কোন নাম্বারিং থাকবেনা। বাই ডিফল্ট একটা গোল চিহ্ন প্রতিটি আইটেমের বাপাশে থাকে। যেমন
+
+```html copy  filename="index.html"
+<ul>
+  <li>Bangla</li>
+  <li>English</li>
+  <li>Social Science</li>
+  <li>Mathemetaics</li>
+</ul>
+```
+
+প্রদর্শন:
+
+- Bangla
+- English
+- Social Science
+- Mathematics
+
+আপনি ইচ্ছে করলে সিএসএস দিয়ে গোল চিহ্নের পরিবর্তে অন্য চিহ্নও দিতে পারেন এগুলি সিএসএস এ আলোচনা হবে।
+
+**Ordered List:**
+
+কখনও নাম্বার দিয়ে তালিকা প্রয়োজন হতে পারে তখন `<ol></ol>` এর ভিতর li ট্যাগ দিয়ে বানাতে পারেন যেমন
+
+```html copy  filename="index.html"
+<ol>
+  <li>iPad</li>
+  <li>iPhone</li>
+  <li>MacBook Air</li>
+</ol>
+```
+
+প্রদর্শন
+
+1.  iPad
+2.  iPhone
+3.  MacBook Air
+
+ol এলিমেন্টে start নামে একটা এট্রিবিউট ব্যবহার করে কত থেকে শুরু হবে এটা ঠিক করা যায় যেমন উপরের লিস্ট টি যদি ১০ থেকে দেখাতে চান তাহলে
+
+```html copy  filename="index.html"
+<ol start="10">
+  <li>iPad</li>
+  <li>iPhone</li>
+  <li>MacBook Air</li>
+</ol>
+```
+
+প্রদর্শন
+
+10. iPad
+11. iPhone
+12. MacBook Air
+
+li তে value নামের একটা এট্রিবিউট ব্যবহার করে যেকোন আইটেমের নাম্বার পরিবর্তন করা যায় যেমন
+
+```html copy  filename="index.html"
+<ol>
+  <li value="5">iPad</li>
+  <li value="6">iPhone</li>
+  <li value="7">MacBook Air</li>
+</ol>
+```
+
+প্রদর্শন
+
+5.  iPad
+6.  iPhone
+7.  MacBook Air
+
+Definition list নামে আরেকটা লিস্টিং ট্যাগ আছে এটা খুব ব্যবহার হয়না, এটা দিয়ে একটু ভিন্নভাবে তালিকা দেখানো যায় যেমন
+
+```html copy  filename="index.html"
+<dl>
+  <dt>Preliminary analysis</dt>
+  <dd>
+    in this step, you need to find out the organization's objectives and the
+    nature and scope of the problem under study. Even if a problem refers only
+    to a small segment of the organization itself then you need to find out what
+    the objectives of the organization itself are. Then you need to see how the
+    problem being studied fits in with them
+  </dd>
+  <dt>Systems analysis, requirements definition</dt>
+  <dd>
+    Defines project goals into defined functions and operation of the intended
+    application. Analyzes end-user information needs
+  </dd>
+  <dt>Systems design</dt>
+  <dd>
+    Describes desired features and operations in detail, including screen
+    layouts, business rules, process diagrams, pseudocode and other
+    documentation.
+  </dd>
+  <dt>Development</dt>
+  <dd>The real code here</dd>
+</dl>
+```
+
+প্রদর্শন
+
+**Preliminary analysis**
+
+in this step, you need to find out the organization's objectives and the nature and scope of the problem under study. Even if a problem refers only to a small segment of the organization itself then you need to find out what the objectives of the organization itself are. Then you need to see how the problem being studied fits in with them
+
+**Systems analysis, requirements definition**
+
+Defines project goals into defined functions and operation of the intended application. Analyzes end-user information needs
+
+**Systems design**
+
+Describes desired features and operations in detail, including screen layouts, business rules, process diagrams, pseudocode and other documentation.
+
+**Development**
+
+The real code here

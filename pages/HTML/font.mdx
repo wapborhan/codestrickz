@@ -1,0 +1,97 @@
+---
+title: এইচটিএমএল ফন্ট (HTML Font)
+description: HTML Tutorial in Bangla
+image: html.png
+---
+
+`<font>` ট্যাগ ব্যাবহার করে ওয়েব সাইটের টেক্সটের স্টাইল, সাইজ এবং কালার যোগ করা হয়। size, color এবং face attributes ব্যাবহার করে আপনি ফন্ট কে কাস্টমাইজ করতে পারি।`<basefont>` ট্যাগ ব্যাবহার করে পেজের সকল টেক্সটকে একই স্টাইল, সাইজ এবং কালার এ সেট করা যায়।
+
+`<font>` এবং `<basefont>` ট্যাগ ব্যাবহার না করে সিএসএস(সিএসএস টিউটোরিয়ালে আলোচনা করা হয়েছে) ব্যাবহার করা উচিত।
+
+### ফন্ট আকার (Font size)
+
+Size attribute এর সাহায্যে ফন্ট এর সাইজ ঠিক করা হয়। ফন্ট এর আকার এর গ্রহনযোগ্য মান হচ্ছে ১ (সবচেয়ে ছোট) হতে ৭ (সবচেয়ে বড়)। ফন্ট এর ডিফল্ট আকার হচ্ছে ৩।
+
+```html copy filename="index.html"
+<p>
+  <font size="5">Here is a size 5 font</font>
+</p>
+```
+
+**প্রদর্শন:**
+
+Here is a size 5 font.
+
+### **ফন্ট রং (Font color)**
+
+কালার attribute এর সাহয্যে font এর color সেট করা হয়।
+
+```html copy filename="index.html"
+<font color="#990000">This text is hexcolor #990000</font>
+<br />
+<font color="red">This text is red</font>
+```
+
+**প্রদর্শন:**
+
+This text is hexcolor #990000  
+This text is red
+
+### **ফন্ট ফেস (Font** **face)**
+
+ফন্ট face এর ক্ষেত্রে সতর্ক হওয়া উচিত কারন আপনার সিস্টেম এ নির্ধারিত ফন্ট টি ইনস্টল দেয়া না থাকে তাহলে আপনি ঐ ফন্ট টি দেখতে পাবেন না এবং তার পরিবর্তে ডিফল্ট হিসাবে Times New Roman ফন্ট টি দেখতে পাবেন।
+
+```html copy filename="index.html"
+<p>
+  <font face="Bookman Old Style, Book Antiqua, Garamond">
+    This paragraph has had its font...
+  </font>
+</p>
+```
+
+**প্রদর্শন:**
+
+This paragraph has had its font formatted by the font tag!
+
+### **বেসফন্ট (Basefont)**
+
+Basefont ট্যাগ এর সাহায্যে আপনি ওয়েব পেজের ডিফল্ট ফন্ট সেট করতে পারেন।নিচে basefont ব্যাবহার করার সঠিক পথ দেখানো হল।
+
+```html copy {3} filename="index.html"
+<html>
+  <body>
+    <basefont size="2" color="green">
+      <p>This paragraph has had its font...</p>
+      <p>This paragraph has had its font...</p>
+      <p>This paragraph has had its font...</p>
+    </basefont>
+  </body>
+</html>
+```
+
+**প্রদর্শন:**
+
+This paragraph has had its font formatted by the basefont tag!  
+This paragraph has had its font formatted by the basefont tag!  
+This paragraph has had its font formatted by the basefont tag!
+
+শেষে বলতে চাই font বা basefont ব্যাবহার না করে সিএসএস (সিএসএস টিউটোরিয়ালে আলোচনা করা হয়েছে) ব্যবহার করা ভালো।
+
+Attributes: Review
+
+| **Attribute=** | **"Value"**               | **Description**                 |
+| -------------- | ------------------------- | ------------------------------- |
+| size=          | "Num. Value 1-7"          | Size of your text, 7 is biggest |
+| color=         | "rgb,name,or hexidecimal" | Change font color               |
+| face=          | "name of font"            | Change the font type            |
+
+### প্রথম অক্ষরের সুন্দর স্টাইল:
+
+ফন্ট কে কাস্টমাইজ করে যেকোন ধরনের স্টাইল করা যায়।
+
+```html copy filename="index.html"
+<p>
+  <font size="7" face="Georgia, Arial" color="maroon">C</font>ustomize your font
+  to achieve a desired look.
+</p>
+```

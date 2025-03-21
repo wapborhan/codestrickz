@@ -1,0 +1,55 @@
+---
+title: এইচটিএমএল শিরোনাম (HTML Heading)
+description: HTML Tag Tutorial in Bangla
+image: html.png
+---
+
+শিরোনাম বা হেডিং আকারে বড় ফন্টের লেখা ব্রাউজারে প্রদর্শনের জন্য এইচটিএমএল এ রয়েছে ৬ ধরনের হেডিং ট্যাগ। এর মধ্যে সবচেয়ে বড় হচ্ছে `<h1></h1>` এভাবে `<h2></h2>`, `<h3></h3>`... h1 পর্যন্ত। যেমন
+
+```html copy filename="index.html"
+<h1>A long flow of text</h1>
+<h2>Unbroken by title,</h2>
+<h3subtitles, and other headers, </h3>
+<h4>crosses  the eyes and numbs the mind</h4>
+<h5>not to mention the fact that</h5>
+<h6>it makes it nearly impossible to scan the text for a specific topic</h6>
+```
+
+\*\* আবারো বলে রাখি যেটা [প্যারাগ্রাফ টিউটোরিয়ালে](https://www.tt.com/html-tutorials/html-paragraph) বললাম - এখানে শুধু জায়গা এবং সময় বাচানোর জন্য শুধুমাত্র h1 এলিমেন্ট দেয়া হল আসলে বাস্তবে `<body></body>` এর ভিতর এইসব এলিমেন্ট থাকবে এবং অবশ্যই ডকুমেন্টের পূর্ন স্ট্রাকচার অনুসরন করতে হবে। অর্থ্যাৎ একটা পূর্নাঙ্গ ডকুমেন্টের ভিতরেই এগুলি রাখতে হবে। যেমন [Doc Type টিউটোরিয়ালে](https://www.tt.com/html-tutorials/doc-type) রেখেছি
+
+প্রদর্শন:
+
+# A long flow of text
+
+## unbroken by title,
+
+#### crosses the eyes and numbs the mind
+
+##### not to mention the fact that
+
+###### it makes it nearly impossible to scan the text for a specific topic
+
+\*\* এখানে আমাদের এই সাইটের সিএসএস ইফেক্ট করার কারনে সাইজ এবং রং একটু ভিন্ন দেখাচ্ছে আপনি এটা সেভ করে ব্রাউজারে বা আমদের [এডিটরে](https://www.tt.com/tt/onlineEditor.php) রান করালে একদম আসল আউটপুট টি দেখতে পাবেন।
+
+p ট্যাগের মতই এখানেও align, class, dir, id, lang, onlick, onkeydown, onkeypress, style, title ইত্যাদি এট্রিবিউট ব্যবহার করতে পারেন।
+
+হেডিং `(<h1></h1>)` এবং প্যারাগ্রাফ `(<p></p>)` এলিমেন্ট ব্যবহার করে একটা
+
+উদাহরন
+
+```html copy filename="index.html"
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CodesTrickz HTML Tutorials</title>
+  </head>
+  <body>
+    <h1>CodesTrickz is the largest Bengali tutorial site</h1>
+
+    <p>
+      To learn Web developemnt and design please visit
+      <a href="http://www.CodesTrickz.com">CodesTrickz</a>
+    </p>
+  </body>
+</html>
+```
